@@ -1,0 +1,375 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Almendra+SC&family=Anton&family=Arbutus&family=Bagel+Fat+One&family=Blaka+Ink&family=Bungee+Hairline&family=Handjet:wght@400;900&family=Nabla&family=Rubik+Iso&display=swap');
+        
+        /* to rotate */
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }}
+            
+                   /* this is to make it bobble  */
+
+        @keyframes move-up-down {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+            }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* regular css  */
+
+
+        main{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "about project";
+        }
+            
+        header {
+            text-align: start;
+            display: grid;
+            grid-template-columns: 4fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas:
+            "name gear"
+            "job gear"
+            ;
+            
+            /* grid-template-areas: "head" "gear"; */
+
+            /* position: relative; */
+            height: 30vh;
+            /* background-image: linear-gradient(rgb(163, 8, 163), darkolivegreen); */
+            /* margin-top: -10px; */
+            width: "100%";
+            border-radius: 20px;
+
+            background: linear-gradient(-45deg, blue, coral,rgb(136, 17, 166));
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            
+        }
+
+        article {
+            grid-area: project;
+            /* width: 90%; */
+            /* height: 60vh; */
+            /* overflow-y: scroll; */
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 9fr ;
+            border-radius: 15px;
+            margin-left: auto;
+            background: linear-gradient(-45deg, blue, purple
+            ,coral);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            
+
+         }
+
+        section {
+            grid-area: about;
+            border-radius: 15px;
+            /* background-color: re */
+            background: linear-gradient(-45deg, palevioletred, orange
+            ,rebeccapurple);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+
+
+        body {
+            background: linear-gradient(-45deg, orange, blue, coral, darkolivegreen);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            height: 100vh;
+            width: 99vw;
+        }
+
+        .myName,.myJob {
+        animation: move-up-down 1s ease-in-out infinite;
+        }
+
+        .subHeader {
+            font-size: 32px;
+            color: white;
+            font-family: "Bagel Fat One";
+            text-align: center;
+            padding-top: 20px;
+            -webkit-text-stroke: 0.5px;
+            -webkit-text-stroke-color: black;
+            /* animation: move-up-down 1s ease-in-out infinite; */
+        }
+
+        
+
+
+                /*  This is for smaller phone displays 700px and smaller */
+
+
+        /* @media screen and (max-width: 700px){
+            .myJob {
+                font-size: 36px;
+                margin-left: 15px;
+                grid-area: header;
+                
+            }
+            .myName {
+                font-size: 36px;
+                margin-left: 15px;
+                padding-top: 20px;
+                grid-area: header;
+
+            }
+            article{
+                width: 50vw;
+            }
+
+            header{
+                height: 20vh;
+            }
+
+        } */
+         /*  This is for larger displays 700px and above */
+        @media screen and (max-width: 900px){
+            .myJob {
+                font-size: 48px;
+                margin-left: 20px;
+                margin-top: -20px;
+                /* -webkit-text-stroke-color: black; */
+                text-decoration-line: underline;
+                /* text-decoration:black; */
+                /* -webkit-text-stroke-width: 0.5px; */
+
+
+            }
+            .myName {
+                font-size: 48px;
+                margin-left: 20px;
+                padding-top: 10px;
+                -webkit-text-stroke-color: black;
+                -webkit-text-stroke-width: 2px;
+            }
+            header {
+                height: 20vh;
+                width: 100%;
+                /* padding-inline: 20px; */
+            }
+            section{
+                /* background-color: black; */
+                /* border-width: 10px; */
+                /* border: solid black; */
+            }
+
+            article >ul >li >p {
+                width: 100%;
+                display: inline-block;
+                padding-top: 40px;
+
+            }
+
+            article > ul {
+                width: 100%;
+                grid-template-rows: none;
+                justify-content: none;
+            }
+            
+            article> ul > li{
+                width: 80%;
+            }
+            
+
+            section >p{
+                padding-bottom: 25px;
+            }
+            .subHeader{
+                margin-top: -15px;
+            }
+            main{
+                display: block;
+            }
+
+            .projectImages{
+                margin: auto;
+                display: block;
+                
+            }
+
+
+        }
+        @media screen and (min-width: 1200px){
+
+            .myJob {
+                font-size: 72px;}
+
+            .myName {
+                font-size: 72px;}
+
+            header {
+                margin-top: 10px;
+                height: 40vh;
+                
+            };
+            
+        }
+
+
+
+
+        ul > li{
+            list-style-type: none;
+            width: 25vw;
+            
+        }
+        /* inside nav bar */
+        ul > a >li {
+            list-style-type: none;
+            font-family: "helvetica" ;
+            color: white;
+            font-family: "Bagel Fat One";
+            -webkit-text-stroke-color: black;
+            -webkit-text-stroke-width: 0.5px;
+        }
+
+        ul > li> a> h3{
+            color: white;
+            font-family: "Bagel Fat One";
+            float: right;
+            text-align: center;
+            padding:10%;
+        }
+        /* this is for about me text */
+        ul > li> p {
+            color: white;
+            font-family: "helvetica" ;
+        }
+
+        section > p{
+            width: 80%;
+            margin: auto;
+            color: white;
+            font-family: "helvetica" ;
+
+        }
+
+        section >ul > a{
+            text-decoration: none;
+        }
+        section > ul{
+            display: flex;
+            justify-content: space-around;
+            
+            /* background: wheat; */
+            padding: 10px;
+            border-radius: 15px;
+            font-family: "helvetica" ;
+
+        }
+
+        
+        
+        .projectImages{
+            float: right;
+            width: 200px;
+        }
+        /* for each div in both project sections */
+        .container {
+            grid: "display";
+            grid-template-rows: repeat(3);
+
+        }
+
+        .myName {
+            color: white;
+            text-decoration:solid black ;
+
+            font-family: 'Bagel Fat One', cursive;
+            font-size: "56px";
+            grid-area: name;
+            
+
+            /* text-align: center; */
+        }
+
+        
+
+        .myJob {
+            color: white;
+            font-family: 'Bagel Fat One', cursive;
+            grid-area: job;
+            /* margin-left: "10%"; */
+
+            /* text-align: center; */
+        }
+
+        .gear {
+            /* grid-area:2; */
+            width: 80%;
+            /* display: flex; */
+            /* justify-content: start; */
+            grid-area: gear;
+            /* grid-area: gear; */
+            animation: rotate 5s linear infinite;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: 10vw;
+            
+            
+            /* width: 100px; */
+        }
+
+        div > p {
+            display: flex;
+            color: white;
+            font-family: "helvetica" ;
+            padding-bottom: 3vh;
+            padding-top: 1vh;
+
+        }
+        div > a {
+            display: grid;
+            grid-template-rows: repeat(2);
+            color: white;
+            font-family: "helvetica" ;
+            margin-bottom: auto;
+            padding-bottom:2vh;
+            float: right;
+            padding-right: 5vw;
+            /* height: 20dvh; */
+
+        }
+
+        div > a> h3{
+            display: flex;
+            width: 100%;
+            /* padding-top: 10vh; */
+            text-align: center;
+            
+        }
+        
+        
