@@ -132,7 +132,7 @@
                 /*  This is for smaller phone displays 700px and smaller */
 
 
-        /* @media screen and (max-width: 700px){
+        @media screen and (max-width: 500px){
             .myJob {
                 font-size: 36px;
                 margin-left: 15px;
@@ -147,16 +147,42 @@
 
             }
             article{
-                width: 50vw;
+                width: 100vw;
             }
 
             header{
-                height: 20vh;
+                height: 40vh;
             }
 
-        } */
+            main{
+                display: block;
+            }
+
+            main> div.container{
+                width: 100%;
+                display: block;
+
+            }
+
+            section > ul {
+                /* display: unset; */
+                flex-direction: column;
+                
+
+            }
+
+            section >ul > a {
+                text-decoration: none;
+                display: block;
+                text-align: center;
+                line-height: 30px;
+            }
+
+            section {padding-bottom: 10px;}
+
+        }
          /*  This is for larger displays 700px and above */
-        @media screen and (max-width: 900px){
+        @media screen and (min-width: 500px){
             .myJob {
                 font-size: 48px;
                 margin-left: 20px;
